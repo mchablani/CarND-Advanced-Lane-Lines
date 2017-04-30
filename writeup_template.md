@@ -21,8 +21,8 @@ The goals / steps of this project are the following:
 
 [image3]: ./output_images/example_threshold_undistorted_test2.jpg "Thresholding Example"
 [image4]: ./output_images/example_Warped_threshold_undistorted_test2.jpg "Warp Example"
-[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
-[image6]: ./examples/Final_test2.jpg "Output"
+[image5]: ./output_images/color_fit_lines.jpg "Fit Visual"
+[image6]: ./output_images/Final_test2.jpg "Output"
 [project_video_marked]: ./project_video_marked.mp4 "Video"
 
 [Advanced-Lane-Lines.ipynb]: ./Advanced-Lane-Lines.ipynb "Advanced-Lane-Lines.ipynb"
