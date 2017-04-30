@@ -22,7 +22,7 @@ The goals / steps of this project are the following:
 [image3]: ./output_images/example_threshold_undistorted_test2.jpg "Thresholding Example"
 [image4]: ./output_images/example_Warped_threshold_undistorted_test2.jpg "Warp Example"
 [image5]: ./output_images/color_fit_lines.jpg "Fit Visual"
-[image6]: ./output_images/Final_test2.jpg "Output"
+[final_image]: ./output_images/Final_test2.jpg "Output"
 [project_video_marked]: ./project_video_marked.mp4 "Video"
 
 [Advanced-Lane-Lines.ipynb]: ./Advanced-Lane-Lines.ipynb "Advanced-Lane-Lines.ipynb"
@@ -112,7 +112,7 @@ I implemented this step in 8th code cell in my code in the IPython notebook [Adv
 
 I implemented this step in 9th code cell in my code in the IPython notebook [Advanced-Lane-Lines.ipynb] and [lanes.py] plot_lanes() functioon.  Here is an example of my result on a test image:
 
-![Final][image6]
+![Final][final_image]
 
 ---
 
