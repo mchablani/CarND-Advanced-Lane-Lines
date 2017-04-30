@@ -18,11 +18,11 @@ The goals / steps of this project are the following:
 
 [image0]: ./test_images/test2.jpg "Test image"
 [image1]: ./output_images/undistorted_test2.jpg "Undistorted"
-[image2]: ./test_images/test1.jpg "Road Transformed"
+
 [image3]: ./output_images/example_threshold_undistorted_test2.jpg "Thresholding Example"
 [image4]: ./output_images/example_Warped_threshold_undistorted_test2.jpg "Warp Example"
 [image5]: ./examples/color_fit_lines.jpg "Fit Visual"
-[image6]: ./examples/example_output.jpg "Output"
+[image6]: ./examples/Final_test2.jpg "Output"
 [project_video_marked]: ./project_video_marked.mp4 "Video"
 
 [Advanced-Lane-Lines.ipynb]: ./Advanced-Lane-Lines.ipynb "Advanced-Lane-Lines.ipynb"
@@ -106,13 +106,13 @@ Then I did some other stuff and fit my lane lines with a 2nd order polynomial ki
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines # through # in my code in `my_other_file.py`
+I implemented this step in 8th code cell in my code in the IPython notebook [Advanced-Lane-Lines.ipynb] and [lanes.py] get_radius() function.
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+I implemented this step in 9th code cell in my code in the IPython notebook [Advanced-Lane-Lines.ipynb] and [lanes.py] plot_lanes() functioon.  Here is an example of my result on a test image:
 
-![alt text][image6]
+![Final][image6]
 
 ---
 
