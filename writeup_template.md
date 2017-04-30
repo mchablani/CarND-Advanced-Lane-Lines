@@ -100,7 +100,7 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+I implemented this step in 7th code cell in my code in the IPython notebook [Advanced-Lane-Lines.ipynb] and [lanes.py] detect_lanes_full() function.
 
 ![alt text][image5]
 
