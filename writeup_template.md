@@ -19,11 +19,11 @@ The goals / steps of this project are the following:
 [image0]: ./test_images/test2.jpg "Test image"
 [image1]: ./output_images/undistorted_test2.jpg "Undistorted"
 [image2]: ./test_images/test1.jpg "Road Transformed"
-[image3]: ./output_images/example_threshold_undistorted_test2 "Thresholding Example"
+[image3]: ./output_images/example_threshold_undistorted_test2.jpg "Thresholding Example"
 [image4]: ./output_images/example_Warped_threshold_undistorted_test2.jpg "Warp Example"
 [image5]: ./examples/color_fit_lines.jpg "Fit Visual"
 [image6]: ./examples/example_output.jpg "Output"
-[video1]: ./project_video.mp4 "Video"
+[project_video_marked]: ./project_video_marked.mp4 "Video"
 
 [Advanced-Lane-Lines.ipynb]: ./Advanced-Lane-Lines.ipynb "Advanced-Lane-Lines.ipynb"
 [calibration.py]: ./calibration.py "calibration module"
@@ -73,7 +73,7 @@ Section 4 of [Advanced-Lane-Lines.ipynb] has all the test images and correspondi
 I used a combination of color and gradient thresholds to generate a binary image.  The code for this step is contained in the 5th code cell of the IPython notebook [Advanced-Lane-Lines.ipynb] and [thresholding.py]
 Here's an example of my output for this step.  
 
-![alt text][image3]
+![Thresholding Example][image3]
 
 Cell 5 of the IPython notebook [Advanced-Lane-Lines.ipynb] has all the test examples transformed.
 
@@ -96,19 +96,19 @@ dst = np.float32([[offset, 0], [img_size[0] - offset, 0], [img_size[0] - offset,
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-![alt text][image4]
+![Warp Example][image4]
 
-####4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
+#### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
 ![alt text][image5]
 
-####5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
+#### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 I did this in lines # through # in my code in `my_other_file.py`
 
-####6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
+#### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
 
@@ -116,11 +116,11 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 ---
 
-###Pipeline (video)
+### Pipeline (video)
 
-####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
+#### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [project_video_marked](./project_video_marked.mp4)
 
 ---
 
