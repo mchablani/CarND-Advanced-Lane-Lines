@@ -127,6 +127,9 @@ def detect_lanes_full(binary_warped):
 
 
 def detect_lanes_incremental(binary_warped, left_fit, right_fit):
+    # Create an output image to draw on and  visualize the result
+    out_img = np.dstack((binary_warped, binary_warped, binary_warped))*255
+
     # Margin in which to search
     margin = 100
 
