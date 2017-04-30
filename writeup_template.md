@@ -126,7 +126,15 @@ Here's a [project_video_marked](./project_video_marked.mp4)
 
 ###Discussion
 
-####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+Initially my pipeline only used the detect lanes full function (where lane detection uses histogram and windowing technique every time) and this worked fairly well for project video except for few frames towards the end.  At this point there was no check for lane line detection sanity.
+
+Then I added the incremental line detection and found that over time lane capture deteriorates, however with lack of lane lines sanity it gave me worse detection than before but much faster detection.
+
+Then I added sanity check based on left and right lane radius of curvature with the assumption that difference of radius of curvature of the 2 lanes = width of the lane and anytime I get width < 2 m and > 5 m assume bad lane detection.  This proved to be wrong assumption and this approach was not a good way for sanity check.  Untimately I added the start of the lines are within resonable distance both min and max from center of image as hinted in lesson material as sanity check.  This worked much better.  
+
+Also I found that instead of average line plots weighted average of line plots where more recent lines have higher weights seemed to work better.
+
+My lane detection does not do well on challenge and harder challenge videos.  I need to spend more time there.  One thought I had was to capture images and make sure thresholding is adjusted to detect those lines and avoid other high gradient lines in the video (curbs that are not lanes and markers in middle of lane).
 
