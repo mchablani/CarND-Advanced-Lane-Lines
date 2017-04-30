@@ -7,7 +7,7 @@ ksize = 15
 # Define a function that thresholds the S-channel of HLS
 # Use exclusive lower bound (>) and inclusive upper (<=)
 # Define a function that thresholds the S-channel of HLS
-def hls_s_select(img, thresh=(90, 255)):
+def hls_s_select(img, thresh=(175, 250)):
     hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
     s_channel = hls[:,:,2]
     binary_output = np.zeros_like(s_channel)
@@ -20,6 +20,11 @@ def hls_h_select(img, thresh=(15, 100)):
     binary_output = np.zeros_like(h_channel)
     binary_output[(h_channel > thresh[0]) & (h_channel <= thresh[1])] = 1
     return binary_output
+
+# def hsv_select_yellow(img, yellow_hsv_low=[0, 80, 200], yellow_hsv_high=[40, 255, 255]):
+#    image_HSV = cv2.cvtColor(img, cv2.COLOR_RGB2SV)
+#    res = apply_color_mask(image_HSV, yellow_hsv_low, yellow_hsv_high)
+#    return res
 
 # Define a function that takes an image, gradient orientation,
 # and threshold min / max values.
@@ -95,5 +100,6 @@ def combined_threshold(image):
     # Combine the two binary thresholds
     combined_binary = np.zeros_like(s_binary)
     combined_binary[(s_binary == 1) | (sobel_binary == 1) | (h_binary == 1)] = 1
+#    combined_binary[(s_binary == 1) | (sobel_binary == 1)] = 1
     
     return combined_binary, s_binary, sobel_binary

@@ -38,6 +38,10 @@ def get_radius(left_fitx, right_fitx, ploty):
     right_curverad = ((1 + (2*right_fit_cr[0]*y_eval*ym_per_pix + right_fit_cr[1])**2)**1.5) / np.absolute(2*right_fit_cr[0])
     return left_curverad, right_curverad
 
+def get_car_deviation(mid_point, left_fitx, right_fitx):
+    lane_center = (right_fitx[-1] + left_fitx[-1]) / 2
+    car_deviation = (mid_point - lane_center)*3.7/700.0 # 3.7 meters is about 700 pixels in the x direction
+    return car_deviation
 
 def detect_lanes_full(binary_warped):
     # Take a histogram of the bottom half of the image
