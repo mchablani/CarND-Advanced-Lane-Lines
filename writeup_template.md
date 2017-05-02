@@ -136,7 +136,7 @@ Then I added sanity check based on left and right lane radius of curvature with 
 
 Also I found that instead of average line plots weighted average of line plots where more recent lines have higher weights seemed to work better.
 
-On looking at images where lane detection did not do well. Like the one here: [image2], I realised it was becase of detected lanes were not parallel.  So I added a validation to check for parallel lanes by taking derivative of polynomil that represents the lane and looking at its value at base of image for both the lanes.
+On looking at images where lane detection did not do well. Like the one here: [image2], I realized it was because of detected lanes were not parallel.  So I added a validation to check for parallel lanes by taking derivative of polynomiala that represents the lanea and looking at its value at base of image for both the lanes.
 
 My lane detection does not do well on challenge and harder challenge videos.  I need to spend more time there.  One thought I had was to capture images and make sure thresholding is adjusted to detect those lines and avoid other high gradient lines in the video (curbs that are not lanes and markers in middle of lane).
 
