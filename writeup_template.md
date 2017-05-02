@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 
 [image0]: ./test_images/test2.jpg "Test image"
 [image1]: ./output_images/undistorted_test2.jpg "Undistorted"
-
+[image2]: ./Debug_bad_lane_detection.jpg "bad lane detection"
 [image3]: ./output_images/example_threshold_undistorted_test2.jpg "Thresholding Example"
 [image4]: ./output_images/example_Warped_threshold_undistorted_test2.jpg "Warp Example"
 [image5]: ./output_images/color_fit_lines.jpg "Fit Visual"
@@ -135,6 +135,8 @@ Then I added the incremental line detection and found that over time lane captur
 Then I added sanity check based on left and right lane radius of curvature with the assumption that difference of radius of curvature of the 2 lanes = width of the lane and anytime I get width < 2 m and > 5 m assume bad lane detection.  This proved to be wrong assumption and this approach was not a good way for sanity check.  Untimately I added the start of the lines are within resonable distance both min and max from center of image as hinted in lesson material as sanity check.  This worked much better.  
 
 Also I found that instead of average line plots weighted average of line plots where more recent lines have higher weights seemed to work better.
+
+One looking at images where lane detection did not do well. Like the one here: [image2], I realised it was becase of detected lanes were not parallel.  So I added a validation to check for parallel lanes by taking derivative of polynomil that represents the lane and looking at its value at base of image for both the lanes.
 
 My lane detection does not do well on challenge and harder challenge videos.  I need to spend more time there.  One thought I had was to capture images and make sure thresholding is adjusted to detect those lines and avoid other high gradient lines in the video (curbs that are not lanes and markers in middle of lane).
 
